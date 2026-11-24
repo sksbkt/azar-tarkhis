@@ -19,12 +19,13 @@ Crafted as a pixel-accurate **Figma-to-Code portfolio and examination showcase**
 
 ---
 
-## 🎨 Design Reference (Figma Specification)
+## 🎨 Visual Comparison: Figma Reference vs. Live Implementation
 
-Reviewers, examiners, and recruiters can inspect the rendered interface directly against the original Figma design specification:
+Reviewers, examiners, and recruiters can inspect the live rendered Next.js application side-by-side against the official Figma design reference:
 
-![Figma Design Reference](./public/docs/figma-reference.png)
-*Figure 1: Full-page 1440px desktop reference render showcasing the exact geometry, typography, color harmony, and section balance as defined in the official Figma design system.*
+| Figma Design Reference | Live Next.js Implementation |
+| :---: | :---: |
+| ![Figma Design Reference](./public/docs/home-reference.png) | ![Live Next.js Implementation](./public/docs/live-result.png) |
 
 ---
 
@@ -69,7 +70,8 @@ Unlike conventional rectangular web layouts, this project utilizes mathematical 
 azar_tarkhis/
 ├── public/
 │   ├── docs/
-│   │   └── figma-reference.png     # Full-page 1440px design reference
+│   │   ├── home-reference.png      # Official Figma design reference mockup
+│   │   └── live-result.png         # Full-page 1440px live Next.js render
 │   ├── icons/                      # Branded SVG vectors, logos & chevrons
 │   └── images/                     # Optimized WebP/PNG vehicles & service assets
 ├── src/

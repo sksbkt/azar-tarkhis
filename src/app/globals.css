@@ -1,0 +1,177 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@theme inline {
+  /* Fonts */
+  --font-sans: var(--font-peyda), "Peyda", system-ui, sans-serif;
+  --font-persian: var(--font-peyda), "Peyda", system-ui, sans-serif;
+
+  /* Brand Primary & Teal Tokens */
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-ocean: var(--color-brand-ocean);
+  --color-brand-deep: var(--color-brand-deep);
+  --color-brand-cta: var(--color-brand-cta);
+  --color-brand-sky: var(--color-brand-sky);
+
+  /* Brand Accent Tokens */
+  --color-accent-gold: var(--color-accent-gold);
+  --color-surface-footer-card: var(--color-surface-footer-card);
+  --color-surface-footer-pill: var(--color-surface-footer-pill);
+  --color-surface-badge: var(--color-surface-badge);
+
+  /* Brand Primary Blues */
+  --color-primary-blue: var(--color-primary-blue);
+  --color-primary-dark-blue: var(--color-primary-dark-blue);
+  --color-accent-blue: var(--color-accent-blue);
+  --color-accent-blue-subtle: var(--color-accent-blue-subtle);
+  --color-surface-ice: var(--color-surface-ice);
+  --color-surface-sky: var(--color-surface-sky);
+  --color-blue-tint: var(--color-blue-tint);
+
+  /* Accent & Status Colors */
+  --color-accent-amber: var(--color-accent-amber);
+  --color-accent-amber-subtle: var(--color-accent-amber-subtle);
+  --color-status-success: var(--color-status-success);
+  --color-status-success-bg: var(--color-status-success-bg);
+  --color-status-success-glow: var(--color-status-success-glow);
+  --color-status-warning: var(--color-status-warning);
+  --color-status-warning-bg: var(--color-status-warning-bg);
+  --color-status-error: var(--color-status-error);
+  --color-status-error-bg: var(--color-status-error-bg);
+  --color-status-error-glow: var(--color-status-error-glow);
+
+  /* Neutrals & Surfaces */
+  --color-surface-white: var(--color-surface-white);
+  --color-surface-alt: var(--color-surface-alt);
+  --color-surface-gray: var(--color-surface-gray);
+  --color-surface-canvas: var(--color-surface-canvas);
+  --color-surface-light-gray: var(--color-surface-light-gray);
+  --color-border-gray: var(--color-border-gray);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-body: var(--color-text-body);
+  --color-text-dark: var(--color-text-dark);
+  --color-text-navy: var(--color-text-navy);
+  --color-footer-bg: var(--color-footer-bg);
+  --color-footer-surface: var(--color-footer-surface);
+  --color-footer-text: var(--color-footer-text);
+  --color-footer-muted: var(--color-footer-muted);
+
+  /* Border Radii */
+  --radius-tag: var(--radius-tag);
+  --radius-card-lg: var(--radius-card-lg);
+  --radius-card-base: var(--radius-card-base);
+  --radius-button: var(--radius-button);
+  --radius-button-sm: var(--radius-button-sm);
+  --radius-story: var(--radius-story);
+
+  /* Shadows */
+  --shadow-dropdown: var(--shadow-dropdown);
+  --shadow-section-top: var(--shadow-section-top);
+  --shadow-card: var(--shadow-card);
+  --shadow-blue-glow: var(--shadow-blue-glow);
+
+  /* Backdrop Blur */
+  --blur-glass: var(--blur-glass);
+  --blur-fade: var(--blur-fade);
+}
+
+html, body, input, button, textarea, select {
+  font-family: var(--font-peyda), "Peyda", system-ui, sans-serif;
+}
+
+html, body {
+  direction: rtl;
+  text-align: right;
+  background-color: var(--color-surface-white);
+  color: var(--color-text-body);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar styling for marquee / tickers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Gradient Utility Classes */
+.bg-clip-text {
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+@utility bg-hero-gradient {
+  background-image: var(--gradient-hero-bg);
+}
+
+@utility bg-watermark-gradient {
+  background-image: var(--gradient-watermark);
+}
+
+@utility bg-sky-fade {
+  background-image: var(--gradient-sky-fade);
+}
+
+@utility bg-vignette {
+  background-image: var(--gradient-vignette);
+}
+
+@utility bg-gold-fade {
+  background-image: var(--gradient-gold-fade);
+}
+
+/* Story Parallelogram Clip-Path */
+@utility clip-story-mask {
+  clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
+  -webkit-clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
+}
+
+.clip-story-mask {
+  clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
+  -webkit-clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
+}
+
+/* Asymmetric Card Corner (12px 12px 12px 0px) */
+@utility clip-asymmetric-card {
+  clip-path: inset(0 round 12px 12px 12px 0px);
+  -webkit-clip-path: inset(0 round 12px 12px 12px 0px);
+}
+
+.clip-asymmetric-card {
+  clip-path: inset(0 round 12px 12px 12px 0px);
+  -webkit-clip-path: inset(0 round 12px 12px 12px 0px);
+  border-radius: 12px 12px 12px 0px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+@keyframes timer-progress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.animate-timer {
+  animation: timer-progress 6.5s linear forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0.75; transform: scale(1.01); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}

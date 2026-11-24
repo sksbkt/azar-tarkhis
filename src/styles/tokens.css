@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Figma Design System Tokens — Osuli Customs Services (شرکت بازرگانی اصولی شجاعی)
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     1. Brand Primary & Teal Palette
+     ------------------------------------------------------------------------ */
+  --color-brand-primary: #035B81;
+  --color-brand-ocean: #026AA2;
+  --color-brand-deep: #084B70;
+  --color-brand-cta: #045D89;
+  --color-brand-sky: #0284C7;
+
+  /* ------------------------------------------------------------------------
+     2. Brand Accent & Surface Tokens
+     ------------------------------------------------------------------------ */
+  --color-accent-gold: #F0A818;
+  --color-accent-amber: #F5B027;
+  --color-surface-footer: #1F242D;
+  --color-surface-footer-card: #282E38;
+  --color-surface-footer-pill: #2C333E;
+  --color-surface-badge: #D8DEE6;
+  --color-surface-ice: #E3F2FC;
+
+  /* ------------------------------------------------------------------------
+     3. Typography & Geometry Tokens
+     ------------------------------------------------------------------------ */
+  --skew-angle-parallel: -3.5deg;
+  --container-max-width: 1380px;
+
+  /* ------------------------------------------------------------------------
+     4. Existing Theme Aliases & Functional Status Tokens
+     ------------------------------------------------------------------------ */
+  --color-primary-blue: #016596;
+  --color-primary-dark-blue: #074E73;
+  --color-accent-blue: #03AEF4;
+  --color-accent-blue-subtle: rgba(3, 174, 244, 0.35);
+  --color-surface-sky: #DFF3FF;
+  --color-blue-tint: rgba(1, 101, 150, 0.4);
+
+  --color-accent-amber-subtle: rgba(240, 165, 16, 0.1);
+  --color-status-success: #15803D;
+  --color-status-success-bg: #F0FDF4;
+  --color-status-success-glow: rgba(34, 197, 94, 0.4);
+  --color-status-warning: #B45309;
+  --color-status-warning-bg: #FFFBEB;
+  --color-status-error: #B91C1C;
+  --color-status-error-bg: #FEF2F2;
+  --color-status-error-glow: rgba(239, 68, 68, 0.4);
+
+  --color-surface-white: #FFFFFF;
+  --color-surface-alt: #F8FAFC;
+  --color-surface-gray: #ECEEF2;
+  --color-surface-canvas: #F3F3F3;
+  --color-surface-light-gray: #F6F7F9;
+  --color-border-gray: #D5DAE2;
+  --color-text-muted: #64748B;
+  --color-text-body: #3A4352;
+  --color-text-dark: #343A46;
+  --color-text-navy: #0F172A;
+  --color-footer-bg: #1F242D;
+  --color-footer-surface: #282E38;
+  --color-footer-text: #D5DAE2;
+  --color-footer-muted: #94A3B8;
+
+  /* Typography Scale */
+  --font-size-display-xl: 48px;
+  --line-height-display-xl: 48px;
+
+  --font-size-watermark: 36px;
+  --line-height-watermark: 44px;
+
+  --font-size-heading-sm: 20px;
+  --line-height-heading-sm: 32px;
+  --line-height-heading-sm-loose: 42px;
+
+  --font-size-body-base: 16px;
+  --line-height-body-base: 26px;
+
+  --font-size-body-sm: 14px;
+  --line-height-body-sm: 22px;
+
+  --font-size-label-sm: 12px;
+  --line-height-label-sm: 20px;
+
+  --font-size-caption: 12px;
+  --line-height-caption: 18px;
+
+  /* Border Radii */
+  --radius-tag: 999px;
+  --radius-card-lg: 16px;
+  --radius-card-base: 12px;
+  --radius-button: 8px;
+  --radius-button-sm: 6px;
+  --radius-story: 6px;
+
+  /* Shadows */
+  --shadow-dropdown: 0px 10px 15px 0px rgba(15, 23, 42, 0.1), 0px 4px 6px 0px rgba(15, 23, 42, 0.05);
+  --shadow-section-top: 0px -5px 12px 0px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0px 4px 20px 0px rgba(0, 0, 0, 0.06);
+  --shadow-blue-glow: 0px 0px 16px 0px rgba(3, 174, 244, 0.35);
+
+  /* Backdrop Blur */
+  --blur-glass: 6px;
+  --blur-fade: 2px;
+
+  /* Gradients */
+  --gradient-hero-bg: linear-gradient(180deg, #F2F8FC 0%, #E6F2FA 100%);
+  --gradient-watermark: linear-gradient(180deg, rgba(177, 186, 200, 1) 0%, rgba(246, 247, 249, 1) 80%);
+  --gradient-sky-fade: linear-gradient(90deg, rgba(239, 249, 255, 1) 0%, rgba(239, 249, 255, 0) 100%);
+  --gradient-vignette: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  --gradient-gold-fade: linear-gradient(90deg, rgba(240, 165, 16, 0) 0%, rgba(240, 165, 16, 1) 100%);
+}

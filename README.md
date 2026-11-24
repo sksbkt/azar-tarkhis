@@ -3,7 +3,8 @@
 > **High-Precision Figma-to-Code Frontend Implementation**  
 > Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS v4**.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-osuli--customs.vercel.app-0070F3?style=flat-square&logo=vercel)](https://osuli-customs.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site_%E2%86%97-00A859?style=for-the-badge&logo=vercel&logoColor=white)](https://osuli-customs.vercel.app)
+
 [![Next.js](https://img.shields.io/badge/Next.js-16.4.6-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.3.0-blue?style=flat-square&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
@@ -14,7 +15,7 @@
 
 ## 🌟 Project Overview & Purpose
 
-This repository contains the production-grade frontend web implementation of the official landing page for **Osuli Customs Services (شرکت بازرگانی اصولی شجاعی)**, an Iranian international trade, commercial vehicle importation, and customs clearance enterprise.
+This repository contains the production-grade frontend web implementation of the official landing page for **Osuli Customs Services (شرکت بازرگانی اصولی شجاعی)**, an Iranian international trade, commercial vehicle importation, and customs clearance enterprise. Explore the deployed application at [🌐 Live Demo ↗](https://osuli-customs.vercel.app).
 
 Crafted as a pixel-accurate **Figma-to-Code portfolio and examination showcase**, this application translates complex geometric branding assets into clean, performant, and responsive web code. It adheres to strict Right-to-Left (RTL) Persian typographic standards, native CSS custom properties, and mathematical vector masks without compromising accessibility or mobile responsiveness.
 
@@ -24,7 +25,7 @@ Crafted as a pixel-accurate **Figma-to-Code portfolio and examination showcase**
 
 Reviewers, examiners, and recruiters can inspect the live rendered Next.js application side-by-side against the official Figma design reference:
 
-| Figma Design Reference | [Live Next.js Implementation](https://osuli-customs.vercel.app) |
+| Figma Design Reference | [🌐 Live Next.js Implementation ↗](https://osuli-customs.vercel.app) |
 | :---: | :---: |
 | ![Figma Design Reference](./public/docs/home-reference.png) | ![Live Next.js Implementation](./public/docs/live-result.png) |
 

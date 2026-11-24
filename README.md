@@ -1,110 +1,139 @@
-# Osuli Customs Services (شرکت بازرگانی اصولی شجاعی)
+# Osuli Customs Services (خدمات گمرکی و بازرگانی اصولی)
 
-> A modern, high-precision Next.js web application built for **Osuli Customs Services (بازرگانی اصولی شجاعی)**, an Iranian international trade, customs clearance, and vehicle import firm. Faithfully crafted 1:1 against the official Figma design system.
+> **High-Precision Figma-to-Code Frontend Implementation**  
+> Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS v4**.
 
----
-
-## 🌟 Project Overview
-
-This project implements the comprehensive homepage for **بازرگانی اصولی شجاعی**, featuring a modern RTL (Right-to-Left) Persian layout, responsive mobile-to-desktop grid systems, custom geometric clip-paths, live currency tickers, interactive vehicle pricing carousels, and design-token architecture.
-
-- **Framework:** [Next.js](https://nextjs.org/) (App Router)
-- **Language:** TypeScript
-- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) with native CSS Custom Properties & Design Tokens
-- **Typography:** Custom Persian **Peyda (پیدا)** font family (Thin to Black with Persian numerals)
+[![Next.js](https://img.shields.io/badge/Next.js-16.4.6-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.3.0-blue?style=flat-square&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.3.3-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-Proprietary-red?style=flat-square)](#)
 
 ---
 
-## 🏛️ Component Architecture
+## 🌟 Project Overview & Purpose
 
-The application is structured into modular, reusable section components under `src/components/sections/`:
+This repository contains the production-grade frontend web implementation of the official landing page for **Osuli Customs Services (شرکت بازرگانی اصولی شجاعی)**, an Iranian international trade, commercial vehicle importation, and customs clearance enterprise.
 
-| Component | Description |
-| :--- | :--- |
-| **`Header`** | Sticky frosted-glass navbar with brand identity, animated navigation links, quick call CTA button, and user authentication trigger. |
-| **`StoriesBar` & `HeroSlider`** | Instagram-style story bubbles for service highlights paired with a responsive hero carousel showcasing customs clearance and vehicle imports. |
-| **`ServicesGrid`** | A 3x2 responsive grid illustrating core business services with custom hover effects, icons, and micro-interactions. |
-| **`VehicleCatalog`** (`DailyPrices`) | Live vehicle price showcase for imported passenger cars and commercial tractors/trucks with pinned category banners, custom cyan Toman (`تومان`) SVG vector icons, smooth horizontal scroll tracks, and 5-second auto-reset pagination. |
-| **`CurrencyTicker`** | Full-bleed edge-to-edge tapered ribbon (`h-[88px]`) displaying live exchange rates (EUR, USD, AED, etc.) with infinite loop marquee, hover-pause interaction, thin slash dividers, and pinned right consultation button. |
-| **`WeblogSection`** | 3-column articles showcase featuring parallel upward-slanted card masks (`#blog-body-slant-mask`), protruding parallelogram author/date badges, RTL navigation buttons, and responsive read-more links. |
-| **`CtaBanner`** (`ConsultationCta`) | High-impact consultation banner combining a deep-teal parallelogram background (`#045D89`) with a protruding, edge-to-edge cropped handshake graphic using strict `-3.5deg` parallel skew geometry and interactive lead-generation modal. |
-| **`Footer`** | Full-bleed dark surface (`#1F242D`) with a straight-slanted top edge (`#footer-top-slant-mask`), interlocking multi-color OCS emblem, newsletter subscription form, navigation pill bar, inline contact items, and a giant edge-to-edge SVG vector watermark (`OSULI CUSTOMS SERVICES`). |
+Crafted as a pixel-accurate **Figma-to-Code portfolio and examination showcase**, this application translates complex geometric branding assets into clean, performant, and responsive web code. It adheres to strict Right-to-Left (RTL) Persian typographic standards, native CSS custom properties, and mathematical vector masks without compromising accessibility or mobile responsiveness.
 
 ---
 
-## 🎨 Design Token System
+## 🎨 Design Reference (Figma Specification)
 
-Design tokens are centralized in [`src/styles/tokens.css`](src/styles/tokens.css) and exposed through CSS variables:
+Reviewers, examiners, and recruiters can inspect the rendered interface directly against the original Figma design specification:
 
-### Brand Primary & Teal Palette
-```css
---color-brand-primary: #035B81; /* Primary brand teal */
---color-brand-ocean:   #026AA2; /* Ocean blue for OCS emblem & highlights */
---color-brand-deep:    #084B70; /* Tapered currency ribbon */
---color-brand-cta:     #045D89; /* Consultation CTA banner */
---color-brand-sky:     #0284C7; /* Action buttons & contact icons */
+![Figma Design Reference](./public/docs/figma-reference.png)
+*Figure 1: Full-page 1440px desktop reference render showcasing the exact geometry, typography, color harmony, and section balance as defined in the official Figma design system.*
+
+---
+
+## 🏛️ Key Architectural & Visual Highlights
+
+### 1. Centralized Design Token Architecture (`src/styles/tokens.css`)
+All visual styling is governed by semantic CSS custom properties defined in [`src/styles/tokens.css`](src/styles/tokens.css) and mirrored into Tailwind v4:
+- **Brand Palette:** Primary Teal (`#035B81`), Ocean Blue (`#026AA2`), Deep Ribbon Teal (`#084B70`), Consultation CTA (`#045D89`), and Sky Blue (`#0284C7`).
+- **Accent & Status Colors:** Warm Gold (`#F0A818`), Amber (`#F5B027`), Emerald Success (`#15803D`), and Error Red (`#B91C1C`).
+- **Dark Surface Tokens:** Footer Surface (`#1F242D`), Newsletter Card (`#282E38`), and Navigation Pill Bar (`#2C333E`).
+- **Geometric Baseline:** Unified `-3.5deg` parallel skew angle with calibrated counter-rotations for upright typography.
+
+### 2. Native Persian Typography (Peyda / پیدا)
+- Full integration of the **Peyda (`PeydaFaNum`)** font family loaded locally via `next/font/local` across 9 distinct font weights (`100 Thin` through `900 Black`).
+- Automatic Persian numeral rendering (`FaNum`), optical kerning, and calibrated line-heights preserving legibility across all Iranian trade and financial terminology.
+
+### 3. Custom SVG Clip-Paths & Geometric Masks
+Unlike conventional rectangular web layouts, this project utilizes mathematical vector masks:
+- **Dynamic Hero Mask (`ResizeObserver`):** An adaptive `userSpaceOnUse` SVG mask that tracks live container dimensions. It preserves a distinct top slope with `20px` rounded top corners on desktop, and dynamically introduces symmetrical `20px` rounded bottom corners (`Q` / `A` curves) on mobile and tablet (`< 1024px`) viewports.
+- **Asymmetric Service Cards (`ServicesGrid`):** Dual-layer clipping featuring upward-slanted polygon bases with overlapping 3D service graphics.
+- **Parallelogram Banners (`CtaBanner`):** Precise `-3.5deg` parallel vertical edges with undistorted corner rounding.
+- **Diagonal Footer Slant (`Footer`):** Custom SVG clip-path (`#footer-top-slant-mask`) creating an angular boundary over the dark surface.
+
+### 4. Interactive & Responsive Components
+- **Hero Slider:** Auto-playing carousel with category-switching tabs (`امور گمرکی`, `خودرو`, `کشنده`, `حمل بین‌الملل`), synchronized progress timers, and responsive re-ordering for mobile viewports.
+- **Daily Prices Carousels (`VehicleCatalog`):** Dual horizontal scroll tracks for passenger cars and commercial heavy trucks, featuring pinned category banners and auto-reset idle timers.
+- **Infinite Currency Ticker:** Full-bleed marquee with pause-on-hover interaction displaying live foreign exchange rates (EUR, USD, AED, etc.).
+- **Articles & Insights (`WeblogSection`):** 3-column editorial grid with protruding parallelogram author/date badges and directional vector navigation links.
+- **Mobile Navigation Drawer:** Responsive slide-over drawer housing navigation links, contact actions, and authentication controls below `1024px`.
+
+---
+
+## 🛠️ Tech Stack & Directory Structure
+
+- **Framework:** Next.js 16.4.6 (App Router, Turbopack)
+- **Library:** React 19.3.0
+- **Language:** TypeScript 5.x
+- **Styling:** Tailwind CSS 4.3.3 & CSS Custom Properties
+- **Icons & Graphics:** Custom inline SVG vectors & Lucide React
+
 ```
-
-### Accents & Surfaces
-```css
---color-accent-gold:          #F0A818; /* Gold badges, tags & OCS emblem */
---color-accent-amber:         #F5B027; /* Currency rate numbers */
---color-surface-footer:       #1F242D; /* Full-bleed dark footer */
---color-surface-footer-card:  #282E38; /* Footer newsletter input */
---color-surface-footer-pill:  #2C333E; /* Footer navigation pill bar */
---color-surface-badge:        #D8DEE6; /* Parallelogram blog date/author badge */
---color-surface-ice:          #E3F2FC; /* Arrow icon buttons */
+azar_tarkhis/
+├── public/
+│   ├── docs/
+│   │   └── figma-reference.png     # Full-page 1440px design reference
+│   ├── icons/                      # Branded SVG vectors, logos & chevrons
+│   └── images/                     # Optimized WebP/PNG vehicles & service assets
+├── src/
+│   ├── app/
+│   │   ├── globals.css             # Tailwind v4 import & global animations
+│   │   ├── layout.tsx              # Root HTML, RTL layout & Peyda font definition
+│   │   └── page.tsx                # Composition of all landing page sections
+│   ├── components/
+│   │   ├── layout/
+│   │   │   └── Footer.tsx          # Full-bleed dark footer & watermark re-export
+│   │   ├── sections/
+│   │   │   ├── Header.tsx          # Floating navbar & mobile drawer
+│   │   │   ├── StoriesBar.tsx      # Instagram-style circular service bubbles
+│   │   │   ├── HeroSlider.tsx      # Dynamic-masked hero carousel & tabs
+│   │   │   ├── ServicesGrid.tsx    # 3x2 service matrix with vector chevrons
+│   │   │   ├── VehicleCatalog.tsx  # Horizontal vehicle price showcase
+│   │   │   ├── CurrencyTicker.tsx  # Infinite marquee ribbon
+│   │   │   ├── WeblogSection.tsx   # Articles & news cards
+│   │   │   ├── CtaBanner.tsx       # Skewed consultation banner & modal
+│   │   │   └── Footer.tsx          # Detailed footer with giant vector watermark
+│   │   └── ui/
+│   │       └── Container.tsx       # 1380px max-width wrapper
+│   ├── data/
+│   │   └── homeData.ts             # Typed mock datasets matching Figma specs
+│   ├── fonts/                      # Peyda Persian font files (100–900 weights)
+│   ├── lib/
+│   │   └── utils.ts                # Class merging utility (clsx + tailwind-merge)
+│   └── styles/
+│       └── tokens.css              # Centralized Figma design tokens
+├── FIGMA_SPECS.md                  # Comprehensive architectural spec sheet
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
-
-### Typography & Geometry
-- **Font Family:** `PeydaFaNum` (Persian numerals enabled by default across weights 100–900).
-- **Parallel Skew Angle:** `-3.5deg` (`transform: skewX(-3.5deg)` with counter-skew for upright content).
-- **Container Max Width:** `1380px` centered with responsive gutter padding (`px-6 sm:px-8`).
-
----
-
-## 🛠️ Key Technical Implementations
-
-1. **Parallel Slanted Geometry & Dynamic Clipping:**
-   - Vector clip-paths (`clipPathUnits="objectBoundingBox"`) for responsive slanted vehicle photo masks and blog cards.
-   - Exact mathematical CSS transforms (`skewX(-3.5deg)` and counter-rotation `skewX(3.5deg)`) for parallel vertical borders on banners with undistorted border radii.
-2. **Horizontal Carousels with Auto-Reset Logic:**
-   - Independent horizontal scroll tracks for both passenger cars and heavy trucks in the Daily Prices section.
-   - Pinned category banner cards layered with `z-30` stacking so scrolling vehicle cards slide smoothly underneath.
-   - 5-second automatic reset timer returning the scroll track to the initial card upon user idle.
-3. **Full-Bleed Marquee with Pause-on-Hover:**
-   - Edge-to-edge tapered ribbon with seamless continuous marquee animation that smoothly pauses when hovered by cursor or touched.
-4. **Responsive & Overflow Safety:**
-   - Root-level `overflow-x-hidden` guarantees that full-bleed ribbons, slanted overflows, and negative top protrusions never cause horizontal viewport jumping or scrollbar jitter on mobile devices.
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (version 18.18 or higher recommended)
-- [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/)
+- [Node.js](https://nodejs.org/) (v18.18.0 or newer recommended)
+- `npm` or `pnpm`
 
-### Installation
+### 1. Clone & Install
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/azar-tarkhis.git
+git clone https://github.com/sksbkt/azar-tarkhis.git
 
-# Navigate into the project directory
+# Navigate into the workspace
 cd azar-tarkhis
 
 # Install dependencies
 npm install
 ```
 
-### Development Server
+### 2. Development Mode
+Run the development server with hot-module replacement and live Turbopack compiling:
 ```bash
 npm run dev
 ```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
-
-### Production Build
+### 3. Production Build & Verification
+Create an optimized production bundle and verify TypeScript types:
 ```bash
 npm run build
 npm run start
@@ -112,5 +141,5 @@ npm run start
 
 ---
 
-## 📄 License
-This project is proprietary and developed for **شرکت بازرگانی اصولی شجاعی**. All rights reserved © 2026.
+## 📄 License & Credits
+Developed as an advanced design-system and frontend implementation showcase based on the **Osuli Customs Services (بازرگانی اصولی شجاعی)** specification. All graphic assets and logos belong to their respective copyright holders.

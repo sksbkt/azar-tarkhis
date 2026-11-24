@@ -4,7 +4,6 @@
 > Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS v4**.
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site_%E2%86%97-00A859?style=for-the-badge&logo=vercel&logoColor=white)](https://osuli-customs.vercel.app)
-
 [![Next.js](https://img.shields.io/badge/Next.js-16.4.6-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.3.0-blue?style=flat-square&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)

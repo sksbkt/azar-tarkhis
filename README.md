@@ -3,11 +3,14 @@
 > **High-Precision Figma-to-Code Frontend Implementation**  
 > Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS v4**.
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-osuli--customs.vercel.app-0070F3?style=flat-square&logo=vercel)](https://osuli-customs.vercel.app)
 [![Next.js](https://img.shields.io/badge/Next.js-16.4.6-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.3.0-blue?style=flat-square&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.3.3-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-Proprietary-red?style=flat-square)](#)
+
+> 🚀 **Live Demo:** [https://osuli-customs.vercel.app](https://osuli-customs.vercel.app)
 
 ---
 
@@ -17,15 +20,18 @@ This repository contains the production-grade frontend web implementation of the
 
 Crafted as a pixel-accurate **Figma-to-Code portfolio and examination showcase**, this application translates complex geometric branding assets into clean, performant, and responsive web code. It adheres to strict Right-to-Left (RTL) Persian typographic standards, native CSS custom properties, and mathematical vector masks without compromising accessibility or mobile responsiveness.
 
+- **Production Deployment:** [https://osuli-customs.vercel.app](https://osuli-customs.vercel.app)
+- **Framework & Tech:** Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, Lucide Icons, Peyda typography.
+
 ---
 
 ## 🎨 Visual Comparison: Figma Reference vs. Live Implementation
 
-Reviewers, examiners, and recruiters can inspect the live rendered Next.js application side-by-side against the official Figma design reference:
+Reviewers, examiners, and recruiters can inspect the live rendered Next.js application side-by-side against the official Figma design reference, or test the responsive live deployment directly at [**osuli-customs.vercel.app**](https://osuli-customs.vercel.app):
 
-| Figma Design Reference | Live Next.js Implementation |
+| Figma Design Reference | Live Next.js Implementation ([osuli-customs.vercel.app](https://osuli-customs.vercel.app)) |
 | :---: | :---: |
-| ![Figma Design Reference](./public/docs/home-reference.png) | ![Live Next.js Implementation](./public/docs/live-result.png) |
+| ![Figma Design Reference](./public/docs/home-reference.png) | [![Live Next.js Implementation](./public/docs/live-result.png)](https://osuli-customs.vercel.app) |
 
 ---
 
